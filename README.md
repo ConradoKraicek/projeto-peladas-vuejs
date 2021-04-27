@@ -9,8 +9,7 @@ Na primeira execução do projeto no Tomcat ir no browser e colocar http://local
 Assim que baixar o projeto do github as dependências já vão estar presentes, não tem Maven, ir no Eclipse e importar Existing projects into Workspace, assim o projeto será importado.
 
 ## 🛠️ Versões do Ambiente
-* [JAVA 1.8]
-* [Hibernate 4.1.8]
-* [PrimeFaces 5.3]
-* [PostgreSQL 12.4]
-* [Tomcat 8.5]
+* [Java14]
+* [Spring Boot 2.4.5]
+* [VUEJS]
+* [PostgreSQL 13]
