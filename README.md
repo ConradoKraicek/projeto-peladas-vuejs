@@ -6,7 +6,7 @@ Na primeira execução do projeto no Tomcat ir no browser e colocar http://local
 
 ### 🔧 Instalação
 
-Assim que baixar o projeto do github as dependências já vão estar presentes, não tem Maven, ir no Eclipse e importar Existing projects into Workspace, assim o projeto será importado.
+Assim que baixar o projeto do github ir no Eclipse e importar Existing projects into Workspace, assim o projeto será importado e execute a parte do backEnd, depois execute no Visual Studio Code a parte do FrontEnd com o comando npm run serve.
 
 ## 🛠️ Versões do Ambiente
 * [Java14]
