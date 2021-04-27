@@ -1,11 +1,11 @@
 <template>
     <div style="margin: 0 auto; width: 80%">
-       <Panel header="Peladas"> 
+       <Panel header="Portal Peladas"> 
          <Menubar :model="items"/>
          <br/>
          <DataTable :value="peladas" :paginator="true" :rows="10" selectionMode="single" :selection.sync="selectedPelada" datakey="id">
             <Column field="id" header="ID"></Column>
-            <Column field="nome" header="Nome"></Column>
+            <Column field="nome" sortable header="Nome"></Column>
             <Column field="local" header="Local"></Column>
             <Column field="hora" header="Hora"></Column>
             <Column field="data" header="Data"></Column>
@@ -29,6 +29,22 @@
               <InputText id="data" type="text" v-model="pelada.data" style="width: 100%"/>
               <label for="data">Data</label>
             </span>
+            <span class="p-float-label">
+              <InputText id="nomeCompleto" type="text" v-model="pelada.usuario.nomeCompleto" style="width: 100%"/>
+              <label for="nomeCompleto">UsuarioNomeCompleto</label>
+            </span>
+            <span class="p-float-label">
+              <InputText id="apelido" type="text" v-model="pelada.usuario.apelido" style="width: 100%"/>
+              <label for="apelido">UsuarioApelido</label>
+            </span>
+            <span class="p-float-label">
+              <InputText id="email" type="text" v-model="pelada.usuario.email" style="width: 100%"/>
+              <label for="email">UsuarioEmail</label>
+            </span>
+            <span class="p-float-label">
+              <InputText id="senha" type="text" v-model="pelada.usuario.senha" style="width: 100%"/>
+              <label for="senha">UsuarioSenha</label>
+            </span>
             <template #footer>
                 <Button label="Salvar" icon="pi pi-check" @click="save"/>
                 <Button label="Cancelar" icon="pi pi-times" @click="closeModal" class="p-button-secondary" />
@@ -49,7 +65,13 @@ export default {
                 nome : null,
                 local : null,
                 hora : null,
-                data : null
+                data : null,
+                usuario : {
+                    nomeCompleto : null,
+                    apelido : null,
+                    email : null,
+                    senha : null
+                }
 
             },
             selectedPelada : {
@@ -61,7 +83,7 @@ export default {
             },
             items : [
                 {
-                    label : 'Novo',
+                    label : 'Nova Pelada e Usuário',
                     icon : 'pi pi-fw pi-plus',
                     command : () => {
                          this.showSaveModal();
@@ -127,7 +149,14 @@ export default {
                      nome : null,
                      local : null,
                      hora : null,
-                     data : null
+                     data : null,
+                     usuario : {
+                         nomeCompleto : null,
+                         apelido : null,
+                         email : null,
+                         senha : null
+                     }
+
                  }
                  this.getAll();
 

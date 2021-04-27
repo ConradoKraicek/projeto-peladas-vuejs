@@ -1,7 +1,6 @@
 package com.pelada.br.model;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -19,8 +18,8 @@ public class Pelada implements Serializable {
 	private Integer id;
 	private String nome;
 	private String local;
-	private Date hora;
-	private Date data;
+	private String hora;
+	private String data;
     
 	
 	@ManyToOne(cascade=CascadeType.ALL)
@@ -54,19 +53,19 @@ public class Pelada implements Serializable {
 		this.local = local;
 	}
 
-	public Date getHora() {
+	public String getHora() {
 		return hora;
 	}
 
-	public void setHora(Date hora) {
+	public void setHora(String hora) {
 		this.hora = hora;
 	}
 
-	public Date getData() {
+	public String getData() {
 		return data;
 	}
 
-	public void setData(Date data) {
+	public void setData(String data) {
 		this.data = data;
 	}
 
